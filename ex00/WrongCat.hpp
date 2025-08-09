@@ -9,6 +9,13 @@ class WrongCat : public WrongAnimal
 {
     public:
         WrongCat();
+        WrongCat(const std::string&);
+        WrongCat(const WrongCat& copy);
+        ~WrongCat();
+
+        WrongCat& operator=(const WrongCat& other);
+
+        void makeSound() const;
 };
 
 #endif

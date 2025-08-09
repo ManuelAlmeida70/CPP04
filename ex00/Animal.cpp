@@ -4,12 +4,12 @@
 
 Animal::Animal() : _type("default_animal")
 {
-    std::cout << "Animal default constructor called" << std::endl;
+    
 }
 
 Animal::Animal(const std::string& type) : _type(type)
 {
-    std::cout << "Animal initializator constructor called" << std::endl;
+    
 }
 
 Animal::Animal(const Animal& copy)
@@ -43,5 +43,5 @@ void Animal::makeSound() const
 
 Animal::~Animal()
 {
-    std::cout << "Destructor called by "  << std::endl;
+    
 }
