@@ -4,12 +4,12 @@
 
 WrongAnimal::WrongAnimal() : _type("default_wrong_animal")
 {
-    
+    std::cout << "WrongAnimal default constructor called by " << _type << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const std::string& type) : _type(type)
 {
-
+    std::cout << "WrongAnimal initializator constructor called by " << _type << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& copy)
@@ -43,5 +43,5 @@ void WrongAnimal::makeSound() const
 
 WrongAnimal::~WrongAnimal()
 {
-
+    std::cout << "WrongAnimal destructor called by " << _type << std::endl;
 }

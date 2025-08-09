@@ -4,11 +4,13 @@
 
 WrongCat::WrongCat() : WrongAnimal()
 {
+    std::cout << "WrongCat default constructor called by " << _type << std::endl;
 
 }
 
 WrongCat::WrongCat(const std::string& type) : WrongAnimal(type)
 {
+    std::cout << "WrongCat initializator constructor called by " << _type << std::endl;
 
 }
 
@@ -34,5 +36,5 @@ void WrongCat::makeSound() const
 
 WrongCat::~WrongCat()
 {
-    
+    std::cout << "WrongCat destructor called by " << _type << std::endl;
 }
