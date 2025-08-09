@@ -10,13 +10,13 @@ class Dog : public Animal
 {
     public:
         Dog();
-        Dog(std::string& name);
+        Dog(const std::string& type);
         Dog(const Dog& copy);
         ~Dog();
 
         Dog& operator=(const Dog& other);
 
-        void makeSound();
+        virtual void makeSound() const;
     
 };
 
