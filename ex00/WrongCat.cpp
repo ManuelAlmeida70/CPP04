@@ -14,7 +14,7 @@ WrongCat::WrongCat(const std::string& type) : WrongAnimal(type)
 
 }
 
-WrongCat::WrongCat(const WrongCat& copy) : WrongCat(copy)
+WrongCat::WrongCat(const WrongCat& copy) : WrongAnimal(copy)
 {
     *this = copy;
 }
