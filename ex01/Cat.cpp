@@ -14,17 +14,19 @@ Cat::Cat(const std::string& type) : Animal(type)
 
 Cat::Cat(const Cat& copy) : Animal(copy)
 {
-    *this = copy;
+	std::cout << "Cat copy constructor called" << std::endl;
+	*this = copy;
 }
 
 Cat& Cat::operator=(const Cat& other)
 {
-    if (this != &other)
-    {
-        Animal::operator=(other);
-        this->_type = other._type;
-    }
-    return *this;
+	std::cout << "Cat assignment constructor called" << std::endl;
+	if (this != &other)
+	{
+		Animal::operator=(other);
+		this->_type = other._type;
+	}
+	return *this;
 }
 
 void Cat::makeSound() const

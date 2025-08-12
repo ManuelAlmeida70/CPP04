@@ -2,6 +2,7 @@
 # define BRAIN_HPP
 
 #include <string>
+#include <vector>
 
 class Brain
 {
@@ -12,8 +13,8 @@ class Brain
 
 		Brain& operator=(const Brain& other);
 
-		void setIdeas(size_t i, const std::string&);
-		std::string getIdeas(size_t i) const;
+		void setIdeas(int i, const std::string&);
+		std::string getIdeas(int i) const;
 
 
 	private:
