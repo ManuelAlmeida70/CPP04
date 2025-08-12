@@ -14,16 +14,18 @@ Animal::Animal(const std::string& type) : _type(type)
 
 Animal::Animal(const Animal& copy)
 {
-    *this = copy;
+	std::cout << "Animal copy constructor called" << std::endl;
+	*this = copy;
 }
 
 Animal& Animal::operator=(const Animal& copy)
 {
-    if (this != &copy)
-    {
-        this->_type = copy._type;
-    }
-    return *this;
+	std::cout << "Animal assignment constructor called" << std::endl;
+	if (this != &copy)
+	{
+		this->_type = copy._type;
+	}
+	return *this;
 }
 
 void Animal::setType(const std::string& type)
