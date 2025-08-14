@@ -4,12 +4,10 @@
 
 Cat::Cat() : Animal()
 {
-    std::cout << "Cat default constructor called by " << _type << std::endl;
-}
+	std::cout << "Cat default constructor called by " << _type << std::endl;
+	_type = "Cat";
+	_brain = new Brain();
 
-Cat::Cat(const std::string& type) : Animal(type)
-{
-    std::cout << "Cat initializator constructor called by " << _type << std::endl;
 }
 
 Cat::Cat(const Cat& copy) : Animal(copy)
@@ -24,9 +22,16 @@ Cat& Cat::operator=(const Cat& other)
 	if (this != &other)
 	{
 		Animal::operator=(other);
-		this->_type = other._type;
+		delete _brain;
+		_brain = new Brain(*other._brain);
 	}
 	return *this;
+}
+
+
+Brain* Cat::getBrain() const
+{
+	return _brain;
 }
 
 void Cat::makeSound() const

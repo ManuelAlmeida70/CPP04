@@ -2,9 +2,9 @@ NAME		= animal
 CXX		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRCS		= Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
+SRCS		= Animal.cpp Cat.cpp Brain.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 
-INC		= Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
+INC		= Animal.hpp Cat.hpp Brain.cpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 
 
 OBJS		= $(SRCS:.cpp=.o)
