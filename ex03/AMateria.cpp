@@ -12,9 +12,25 @@ std::string const & AMateria::getType() const
     return _type;
 }
 
+AMateria::AMateria(const AMateria& copy) : _type(copy._type)
+{
+    std::cout << "AMateria " << _type << " copied" << std::endl;
+}
+
 AMateria::~AMateria()
 {
     std::cout << "AMateria " << _type << "Destroyed" << std::endl;
+}
+
+
+AMateria& AMateria::operator=(const AMateria& other)
+{
+    std::cout << "AMateria assignment operator called" << std::endl;
+    if (this != &other)
+    {
+        //O enunciado diz: copiar um type de AMateria nao faz sentido
+    }
+    return *this;
 }
 
 void AMateria::use(ICharacter& target)

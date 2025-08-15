@@ -14,9 +14,9 @@ class ICharacter
 
         virtual void equip(AMateria* m) = 0;
 
-        virtual void unequip(int index) = 0;
+        virtual void unequip(int idx) = 0;
 
-        virtual void use(int index, ICharacter& target) = 0;
+        virtual void use(int idx, ICharacter& target) = 0;
 };
 
 #endif
