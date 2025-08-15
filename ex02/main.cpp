@@ -8,6 +8,7 @@
 
 int main()
 {
+	//Animal a;
 	std::cout << "=====Basic test=====" << std::endl;
 	const Animal* j = new Dog();
 	const Animal* i = new Dog();
