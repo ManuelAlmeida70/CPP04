@@ -13,8 +13,6 @@ class AMateria
         AMateria(std::string const & type);
         ~AMateria();
 
-        AMateria& operator=(const AMateria& amateria);
-
         std::string const & getType() const;
 
 
